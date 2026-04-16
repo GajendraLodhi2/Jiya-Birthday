@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>For Jiya ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark center">
+
+<h1 id="type"></h1>
+<p id="sub"></p>
+
+<button class="btn glow" onclick="enter()">Enter 💫</button>
+
+<script>
+const mainText = "Hey Jiya 💖";
+const subText = "Ek chhota sa surprise aapke liye...";
+
+let i=0;
+
+function type(){
+  if(i<mainText.length){
+    document.getElementById("type").innerHTML += mainText.charAt(i);
+    i++;
+    setTimeout(type,80);
+  } else {
+    document.getElementById("sub").innerHTML = subText;
+  }
+}
+type();
+
+function enter(){
+  window.location.href="main.html";
+}
+</script>
+
+</body>
+</html>

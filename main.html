@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Jiya</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dark">
+
+<audio id="music" src="music.mp3" autoplay loop muted></audio>
+
+<div class="container glass">
+
+<h1>🎂 Happy Birthday Jiya 🎂</h1>
+<h2 id="countdown"></h2>
+
+<button onclick="showPhoto()">📸 Surprise</button>
+<button onclick="showStory()">💌 Message</button>
+
+<!-- Photo Slideshow -->
+<div id="photo" class="hidden">
+<img id="slide" class="main-img" src="jiya1.jpg">
+<h2 class="glow-text">✨ You are truly special 💖 ✨</h2>
+</div>
+
+<!-- Story -->
+<div id="story" class="hidden">
+
+<div class="card" onclick="toggle(this)">
+<h3>🌷 Shuruaat</h3>
+<p>Kabhi socha nahi tha ki ek simple “Hi” se shuru hua safar itna khaas ban jayega. Dheere dheere baatein badhi aur ek connection ban gaya jo aaj special feel hota hai.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>💬 Baatein</h3>
+<p>Raat ke lambe conversations, bina wajah hasi aur bina reason baat karte rehna — ye sab moments ab aadat ban chuke hain.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>🤍 Connection</h3>
+<p>Alag jagah se hone ke baad bhi ek apnapan feel hota hai. Shayad isi wajah se baatein itni natural lagti hain.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>🌼 Samajh</h3>
+<p>Tum bina judge kiye sun leti ho — aur ye quality tumhe sabse alag banati hai.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>🌸 Dosti</h3>
+<p>Ye sirf normal dosti nahi lagti, kuch zyada special feel hota hai.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>💫 Special</h3>
+<p>Tum meri life ka ek peaceful part ban chuki ho.</p>
+</div>
+
+<div class="card" onclick="toggle(this)">
+<h3>🎂 Wish</h3>
+<p>Aaj ke din bas yehi dua hai ki tum hamesha khush raho ❤️</p>
+</div>
+
+</div>
+
+</div>
+
+<!-- Floating Decorations -->
+<div class="floating">
+  <span>❤️</span>
+  <span>🎈</span>
+  <span>🎂</span>
+  <span>🌸</span>
+  <span>💖</span>
+  <span>🎉</span>
+  <span>🌹</span>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
