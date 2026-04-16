@@ -1,37 +1,160 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>For Jiya ❤️</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Jiya 💖</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #f8cdda, #fbd3e9);
+    overflow-x: hidden;
+}
+
+/* Center container */
+.container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Heading */
+h1 {
+    font-size: 24px;
+    color: #5a2a2a;
+}
+
+p {
+    font-size: 15px;
+    color: #5a2a2a;
+}
+
+/* Button */
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    color: white;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+/* Card */
+.card {
+    background: rgba(255,255,255,0.6);
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Image */
+img {
+    width: 100%;
+    max-width: 250px;
+    border-radius: 20px;
+}
+
+/* Sections */
+.section {
+    background: white;
+    margin: 10px 0;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 14px;
+}
+
+/* Hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Floating hearts */
+.heart {
+    position: fixed;
+    bottom: -10px;
+    font-size: 20px;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; }
+    100% { transform: translateY(-100vh); opacity: 0; }
+}
+
+/* Mobile fix */
+@media (max-width: 480px) {
+    h1 { font-size: 22px; }
+    button { width: 80%; }
+    img { max-width: 200px; }
+}
+</style>
 </head>
 
-<body class="dark center">
+<body>
 
-<h1 id="type"></h1>
-<p id="sub"></p>
+<!-- FIRST SCREEN -->
+<div class="container" id="home">
+    <h1>Hey Jiya 💖</h1>
+    <p>Ek chhota sa surprise aapke liye...</p>
+    <button onclick="openSurprise()">Enter ✨</button>
+</div>
 
-<button class="btn glow" onclick="enter()">Enter 💫</button>
+<!-- MAIN CONTENT -->
+<div class="container hidden" id="main">
+
+    <h1>🎂 Happy Birthday Jiya 🎉</h1>
+
+    <div class="card">
+        <img src="jiya.jpg" alt="Jiya Photo">
+
+        <p>✨ You are truly special 💖 ✨</p>
+    </div>
+
+    <div class="section">🌸 Shuruaat — Jab hum mile the, tab se sab kuch special lagne laga...</div>
+    <div class="section">💬 Baatein — Har baat tumse share karna ek habit ban gaya hai...</div>
+    <div class="section">🤍 Connection — Tumse jo connection hai, wo kisi aur se nahi...</div>
+    <div class="section">🌼 Samajh — Tum mujhe bina bole samajh leti ho...</div>
+    <div class="section">🌺 Dosti — Tum meri best friend ho...</div>
+    <div class="section">💖 Special — Tum meri life ka sabse special part ho...</div>
+    <div class="section">🎂 Wish — Hamesha khush raho aur muskurati raho...</div>
+
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
 
 <script>
-const mainText = "Hey Jiya 💖";
-const subText = "Ek chhota sa surprise aapke liye...";
+function openSurprise() {
+    document.getElementById("home").style.display = "none";
+    document.getElementById("main").classList.remove("hidden");
+    document.getElementById("music").play();
 
-let i=0;
-
-function type(){
-  if(i<mainText.length){
-    document.getElementById("type").innerHTML += mainText.charAt(i);
-    i++;
-    setTimeout(type,80);
-  } else {
-    document.getElementById("sub").innerHTML = subText;
-  }
+    startHearts();
 }
-type();
 
-function enter(){
-  window.location.href="main.html";
+// Floating hearts animation
+function startHearts() {
+    setInterval(() => {
+        let heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "💖";
+
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (15 + Math.random() * 20) + "px";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 5000);
+    }, 300);
 }
 </script>
 
