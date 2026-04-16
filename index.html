@@ -3,18 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Happy Birthday Jiya 💖</title>
+<title>For Jiya 💖</title>
 
 <style>
-body {
+
+/* RESET */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* BODY */
+body {
     font-family: 'Poppins', sans-serif;
     background: linear-gradient(135deg, #f8cdda, #fbd3e9);
     overflow-x: hidden;
     text-align: center;
 }
 
-/* Container */
+/* CONTAINER */
 .container {
     width: 90%;
     max-width: 420px;
@@ -22,10 +30,11 @@ body {
     padding-top: 40px;
 }
 
-/* Headings */
+/* HEADINGS */
 h1 {
     font-size: 24px;
     color: #5a2a2a;
+    margin-bottom: 10px;
 }
 
 p {
@@ -33,73 +42,23 @@ p {
     color: #5a2a2a;
 }
 
-/* Button */
+/* BUTTON */
 button {
     padding: 12px 25px;
-    border-radius: 25px;
+    border-radius: 30px;
     border: none;
     background: linear-gradient(45deg, #ff758c, #ff7eb3);
     color: white;
     font-size: 16px;
+    margin-top: 20px;
 }
 
-/* Hidden */
+/* HIDDEN */
 .hidden {
     display: none;
 }
 
-/* Card */
-.card {
-    background: rgba(255,255,255,0.6);
-    padding: 15px;
-    border-radius: 20px;
-    margin-top: 15px;
-}
-
-/* Sections */
-.section {
-    background: white;
-    margin: 12px 0;
-    padding: 15px;
-    border-radius: 15px;
-    font-size: 14px;
-    line-height: 1.5;
-}
-
-/* Slider */
-.slider {
-    width: 100%;
-    max-width: 260px;
-    margin: 15px auto;
-    overflow: hidden;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(255,100,150,0.4);
-}
-
-.slides {
-    display: flex;
-    width: 300%;
-    animation: slide 10s infinite;
-}
-
-.slides img {
-    width: 100%;
-    border-radius: 20px;
-}
-
-/* Slider animation */
-@keyframes slide {
-    0% {transform: translateX(0);}
-    30% {transform: translateX(0);}
-
-    35% {transform: translateX(-100%);}
-    65% {transform: translateX(-100%);}
-
-    70% {transform: translateX(-200%);}
-    100% {transform: translateX(-200%);}
-}
-
-/* Floating hearts */
+/* HEARTS */
 .heart {
     position: fixed;
     bottom: -10px;
@@ -111,8 +70,63 @@ button {
     100% {transform: translateY(-100vh); opacity:0;}
 }
 
-/* Typing text */
+/* ENTRY SCREEN */
+#home {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-box {
+    background: rgba(255,255,255,0.6);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255,100,150,0.3);
+}
+
+/* MAIN */
+#main {
+    padding-bottom: 50px;
+}
+
+/* SLIDER */
+.slider {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    margin-top: 20px;
+}
+
+.slides {
+    display: flex;
+    height: 100%;
+    animation: slide 12s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* SLIDER ANIMATION */
+@keyframes slide {
+    0% {transform: translateX(0);}
+    30% {transform: translateX(0);}
+
+    35% {transform: translateX(-100%);}
+    65% {transform: translateX(-100%);}
+
+    70% {transform: translateX(-200%);}
+    100% {transform: translateX(-200%);}
+}
+
+/* TYPING */
 .typing {
+    margin-top: 10px;
     border-right: 2px solid;
     white-space: nowrap;
     overflow: hidden;
@@ -120,31 +134,86 @@ button {
 }
 
 @keyframes typing {
-    from {width: 0}
-    to {width: 100%}
+    from {width:0}
+    to {width:100%}
 }
 
 @keyframes blink {
     50% {border-color: transparent}
 }
+
+/* SECTION */
+.section {
+    background: white;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+/* ===== ADD PART 3 CSS HERE ===== */
+
+.chat {
+    margin-top: 10px;
+}
+
+.msg {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 15px;
+    max-width: 70%;
+    font-size: 13px;
+}
+
+.left {
+    background: #f1f1f1;
+    text-align: left;
+}
+
+.right {
+    background: #ffb6c1;
+    margin-left: auto;
+    text-align: right;
+}
+
+#surpriseBox {
+    margin-top: 15px;
+}
+
+.balloon {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: rise 6s linear infinite;
+}
+
+@keyframes rise {
+    0% {transform: translateY(0);}
+    100% {transform: translateY(-120vh);}
+}
+
+/* ===== END PART 3 CSS ===== */
 </style>
 </head>
 
 <body>
 
-<!-- FIRST PAGE -->
-<div class="container" id="home">
-    <h1>Hey Jiya 💖</h1>
-    <p>Ek chhota sa surprise aapke liye...</p>
-    <button onclick="openSite()">Enter ✨</button>
+<!-- ENTRY -->
+<div id="home">
+    <div class="home-box">
+        <h1>Hey Jiya 💖</h1>
+        <p>Ek chhota sa surprise hai... sirf tumhare liye</p>
+        <button onclick="openSite()">Enter ✨</button>
+    </div>
 </div>
 
-<!-- MAIN PAGE -->
-<div class="container hidden" id="main">
+<!-- MAIN -->
+<div id="main" class="container hidden">
 
     <h1>🎂 Happy Birthday Jiya 🎉</h1>
 
-    <!-- Slider -->
+    <!-- SLIDER -->
     <div class="slider">
         <div class="slides">
             <img src="jiya1.jpg">
@@ -154,60 +223,153 @@ button {
     </div>
 
     <p class="typing">✨ You are truly special 💖 ✨</p>
-
-    <!-- LONG SCRIPT CONTENT -->
-
+    <!-- 🌸 SHURUAAT -->
     <div class="section">
         🌸 <b>Shuruaat</b> —  
-        Jab hum pehli baar mile the na, tab shayad mujhe itna idea nahi tha ki tum meri life me itni important ban jaogi. Dheere dheere baatein hui, fir wo baatein habit ban gayi... aur aaj situation ye hai ki tumhare bina din adhura lagta hai.
+        Mujhe abhi bhi yaad hai wo pehla moment jab hum mile the... shayad us waqt maine itna feel nahi kiya tha, par dheere dheere samajh aaya ki tum meri life me ek alag hi jagah lene wali ho.  
+        <br><br>
+        Pehle normal baatein hoti thi, fir wo baatein thodi special ban gayi… aur phir ek time aaya jab tumse baat kiye bina din complete hi nahi hota tha.  
+        <br><br>
+        Shayad ye sab naturally hua, bina kisi planning ke… aur shayad isi wajah se ye aur bhi beautiful hai.
     </div>
 
+    <!-- 💬 BAATEIN -->
     <div class="section">
         💬 <b>Baatein</b> —  
-        Tumse baat karna sirf timepass nahi hai... wo ek feeling hai. Har chhoti badi baat tumse share karna, tumhari hasi sunna, tumhara reply ka wait karna — sab kuch ek special part ban gaya hai meri life ka.
+        Tumse baat karna sirf ek habit nahi hai, wo ek feeling hai. Har chhoti baat tumse share karna, tumhara reply ka wait karna, aur jab tum reply karti ho to automatically smile aa jana…  
+        <br><br>
+        Ye sab chhoti chhoti cheezein hi to hoti hain jo kisi ko special banati hain.  
+        <br><br>
+        Kabhi kabhi lagta hai ki agar tum na hoti to shayad itni khushi bhi feel nahi hoti.
     </div>
 
+    <!-- 🤍 CONNECTION -->
     <div class="section">
         🤍 <b>Connection</b> —  
-        Tumse jo connection hai na, wo explain nahi hota. Na wo sirf dosti hai, na kuch aur simple... wo ek aisa bond hai jo naturally bana hai, bina force ke, bina kisi expectation ke.
+        Tumse jo connection hai na, wo define karna mushkil hai. Na wo sirf dosti hai, na simple attraction… wo kuch aur hi hai.  
+        <br><br>
+        Ek aisa bond jo bina force ke bana, bina kisi expectation ke bana… bas naturally grow hota gaya.  
+        <br><br>
+        Aur honestly, aise connections life me bahut rare hote hain.
     </div>
 
+    <!-- 🌼 SAMAJH -->
     <div class="section">
         🌼 <b>Samajh</b> —  
-        Tum mujhe bina bole samajh leti ho. Kab main thik hoon, kab nahi, kab mujhe kisi ki zarurat hai — tumhe sab pata chal jata hai. Aur ye cheez tumhe aur bhi special banati hai.
+        Tumhari sabse special baat ye hai ki tum samajh leti ho… bina zyada explain kiye.  
+        <br><br>
+        Kab main thik hoon, kab nahi… kab main bas normal baat kar raha hoon aur kab mujhe sach me kisi ki zarurat hai — tumhe pata chal jata hai.  
+        <br><br>
+        Aur ye cheez honestly mujhe tumhare aur kareeb le aati hai.
     </div>
 
+    <!-- 🌺 DOSTI -->
     <div class="section">
         🌺 <b>Dosti</b> —  
-        Tum sirf ek friend nahi ho, tum meri best friend ho. Aur sach kahu to life me itni pure aur real dosti bahut kam milti hai.
+        Tum sirf ek friend nahi ho… tum meri best friend ho.  
+        <br><br>
+        Aur best friend wo hota hai jiske saath tum bina soche sab share kar sako, jiske saamne tum apne real self me reh sako.  
+        <br><br>
+        Aur tumne mujhe wo comfort diya hai.
     </div>
 
+    <!-- 💖 SPECIAL -->
     <div class="section">
         💖 <b>Special</b> —  
-        Tum meri life ka wo part ho jise main lose nahi karna chahta. Tumhari value mere liye words se bahar hai. Tum ho to sab kuch thoda better lagta hai.
+        Tum meri life ka ek aisa part ban chuki ho jise main lose nahi karna chahta.  
+        <br><br>
+        Tumhari presence se sab kuch thoda better lagta hai… chahe mood kaisa bhi ho.  
+        <br><br>
+        Aur ye jo feeling hai na… ye hi batati hai ki tum kitni special ho.
     </div>
 
+    <!-- 💭 FEELINGS -->
     <div class="section">
-        🎂 <b>Wish</b> —  
-        Bas itna sa wish hai — tum hamesha khush raho, smile karti raho, aur life me jo bhi chaho wo tumhe mile. Aur haan... kabhi mujhe bhool mat jana 💖
+        💭 <b>Feelings</b> —  
+        Shayad main hamesha clearly express nahi kar pata… par jo feel karta hoon wo genuine hai.  
+        <br><br>
+        Tumhari smile, tumhari baatein, tumhara nature — sab kuch mujhe achha lagta hai.  
+        <br><br>
+        Aur jab bhi main tumhare baare me sochta hoon, automatically ek smile aa jati hai.
     </div>
 
-</div>
+    <!-- 🌈 JOURNEY -->
+    <div class="section">
+        🌈 <b>Journey</b> —  
+        Humari journey abhi tak jitni bhi rahi hai… wo simple nahi thi, par beautiful zarur thi.  
+        <br><br>
+        Har ek moment, har ek conversation ne kuch na kuch add kiya hai is connection me.  
+        <br><br>
+        Aur main chahta hoon ki ye journey aise hi continue rahe.
+    </div>
 
-<!-- MUSIC -->
+    <!-- 💌 PROMISE -->
+    <div class="section">
+        💌 <b>Promise</b> —  
+        Main ye promise nahi karta ki sab perfect hoga…  
+        <br><br>
+        Par haan, ye zarur promise karta hoon ki main hamesha tumhare saath rahunga, chahe situation kaisi bhi ho.  
+        <br><br>
+        Tumhare liye respect, care aur honesty kabhi kam nahi hogi.
+    </div>
+    <!-- 💬 CHAT STYLE -->
+    <div class="section">
+        💬 <b>Hamari Choti Si Chat 💖</b>
+        
+        <div class="chat">
+            <div class="msg left">Hi 🙂</div>
+            <div class="msg right">Hello 😊</div>
+            <div class="msg left">Kya kar rahi ho?</div>
+            <div class="msg right">Kuch nahi... tum?</div>
+            <div class="msg left">Bas tumse baat 🙂</div>
+            <div class="msg right">Acha ji 😄</div>
+            <div class="msg left">Tum important ho 🙂</div>
+            <div class="msg right">Really?</div>
+            <div class="msg left">Haan... bahut 💖</div>
+        </div>
+    </div>
+
+    <!-- 🎁 SURPRISE BUTTON -->
+    <button onclick="showSurprise()">🎁 Open Surprise</button>
+
+    <!-- SURPRISE BOX -->
+    <div id="surpriseBox" class="hidden">
+        <div class="section">
+            💖 Tum meri life ka sabse pyara part ho 💖  
+            <br><br>
+            Aur ye website sirf ek chhoti si koshish hai tumhe special feel karane ki 😊
+        </div>
+    </div>
+
+    <!-- 🎂 FINAL WISH -->
+    <div class="section">
+        🎂 <b>Birthday Wish</b> —  
+        Aaj tumhara special day hai… aur main bas ye chahta hoon ki tum hamesha khush raho.  
+        <br><br>
+        Tumhari life me jitni bhi happiness ho sakti hai, wo sab tumhe mile.  
+        <br><br>
+        Aur haan… kabhi mujhe bhool mat jana 💖  
+    </div>
+
+</div> <!-- ✅ CLOSE MAIN DIV -->
+
+<!-- ✅ MUSIC (FIXED) -->
 <audio id="music" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
+<!-- ✅ SCRIPT -->
 <script>
+
 function openSite() {
     document.getElementById("home").style.display = "none";
     document.getElementById("main").classList.remove("hidden");
     document.getElementById("music").play();
     startHearts();
+    startBalloons();
 }
 
-/* Floating hearts */
+/* Floating Hearts */
 function startHearts() {
     setInterval(() => {
         let heart = document.createElement("div");
@@ -220,7 +382,41 @@ function startHearts() {
         setTimeout(()=>heart.remove(),5000);
     }, 300);
 }
+
+/* Surprise */
+function showSurprise() {
+    document.getElementById("surpriseBox").classList.remove("hidden");
+}
+
+/* Balloons */
+function startBalloons() {
+    setInterval(() => {
+        let b = document.createElement("div");
+        b.className = "balloon";
+        b.innerHTML = "🎈";
+        b.style.left = Math.random()*100 + "vw";
+        document.body.appendChild(b);
+
+        setTimeout(()=>b.remove(),6000);
+    }, 500);
+}
+
+/* Click Hearts */
+document.addEventListener("click", function(e) {
+    let heart = document.createElement("div");
+    heart.innerHTML = "💖";
+    heart.style.position = "fixed";
+    heart.style.left = e.clientX + "px";
+    heart.style.top = e.clientY + "px";
+    heart.style.fontSize = "20px";
+    heart.style.animation = "floatUp 2s linear";
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),2000);
+});
+
 </script>
 
 </body>
 </html>
+    
