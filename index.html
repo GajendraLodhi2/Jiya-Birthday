@@ -133,11 +133,6 @@ button:active {
     70% { transform: translateX(-66.666%); }
     100% { transform: translateX(-66.666%); }
 }
-    
-
-/* TYPING */
-
-
 
 /* TYPING */
 .typing {
@@ -152,7 +147,9 @@ button:active {
     from {width:0}
     to {width:100%}
 }
-
+@keyframes blink {
+    50% {border-color: transparent}
+}
 /* SECTION */
 /* 💖 GLOW EFFECT */
 .section {
@@ -402,7 +399,6 @@ function openSite() {
     document.getElementById("music").play();
     startHearts();
     startBalloons();
-    startTyping(); // ⭐ IMPORTANT LINE ADDED
 }
 
 /* Floating Hearts */
@@ -451,29 +447,8 @@ document.addEventListener("click", function(e) {
     setTimeout(()=>heart.remove(),2000);
 });
 
-
-/* 💖 SEQUENTIAL TYPING (ADD THIS PART) */
-const elements = document.querySelectorAll(".type");
-let speed = 20;
-
-function typeText(el, text, i = 0, callback) {
-    if (i < text.length) {
-        el.innerHTML += text.charAt(i);
-        setTimeout(() => typeText(el, text, i + 1, callback), speed);
-    } else if (callback) {
-        setTimeout(callback, 800);
-    }
-}
-
-function startTyping(index = 0) {
-    if (index >= elements.length) return;
-
-    let el = elements[index];
-    let text = el.getAttribute("data-text");
-
-    typeText(el, text, 0, () => {
-        startTyping(index + 1);
-    });
-}
-
 </script>
+
+</body>
+</html>
+    
