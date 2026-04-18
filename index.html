@@ -136,47 +136,12 @@ button:active {
     
 
 /* TYPING */
-/* 💖 GLOW EFFECT */
-.section {
-    margin: 15px 0;
-    padding: 18px;
-    border-radius: 15px;
-
-    font-size: 15px;
-    line-height: 1.7;
-    font-weight: 500;
-
-    /* ✅ Readable soft card */
-    background: rgba(255, 255, 255, 0.8);
-    color: #5a0038;   /* dark pink text */
-
-    /* ✅ Clean soft shadow */
-    box-shadow: 0 6px 18px rgba(255, 105, 180, 0.25);
-
-    /* ✅ subtle glow (not harsh) */
-    animation: softGlow 3s infinite alternate;
-
-    position: relative;
-    z-index: 1;
-}
-
-/* Soft animation (optional but nice) */
-@keyframes softGlow {
-    from {
-        box-shadow: 0 4px 12px rgba(255,105,180,0.2);
-    }
-    to {
-        box-shadow: 0 8px 22px rgba(255,105,180,0.35);
-    }
-}
-/* CURSOR */
-.type::after {
-    content: "|";
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    50% { opacity: 0; }
+.typing {
+    margin-top: 10px;
+    border-right: 2px solid;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 4s steps(40), blink .5s infinite alternate;
 }
 
 @keyframes typing {
@@ -189,7 +154,15 @@ button:active {
 }
 
 /* SECTION */
-
+.section {
+    background: white;
+    margin: 15px 0;
+    padding: 18px;
+    border-radius: 15px;
+    font-size: 14px;
+    line-height: 1.6;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
 /* ===== ADD PART 3 CSS HERE ===== */
 
 .chat {
@@ -260,99 +233,99 @@ button:active {
         </div>
     </div>
 
-    <p class="type" data-text="✨ You are truly special 💖 ✨"></p>
+    <p class="typing">✨ You are truly special 💖 ✨</p>
     <!-- 🌸 SHURUAAT -->
-    <div class="section type" >
+    <div class="section">
         🌸 <b>Shuruaat</b> —  
         Mujhe abhi bhi yaad hai wo pehla moment jab hum Achat per August me mile the... shayad us waqt maine itna feel nahi kiya tha, par dheere dheere samajh aaya ki aap meri life me ek alag hi jagah lene wali ho.  
-        <br> 
-        Pehle normal baatein hoti thi, fir wo baatein thodi special ban gayi… aur phir ek time aaya jab aapse baat kiye bina din complete hi nahi hota tha.
-        <br> 
+        <br>
+        Pehle normal baatein hoti thi, fir wo baatein thodi special ban gayi… aur phir ek time aaya jab aapse baat kiye bina din complete hi nahi hota tha.  
+        <br>
         Shayad ye sab naturally hua, bina kisi planning ke… aur shayad isi wajah se ye aur bhi beautiful hai.
     </div>
 
     <!-- 💬 BAATEIN -->
-    <div class="section type" data-text="
+    <div class="section">
         💬 <b>Baatein</b> —  
         Aapse baat karna sirf ek habit nahi hai, wo ek feeling hai. Har chhoti baat aapse share karna, aapka reply ka wait karna, aur jab aap reply karti ho to automatically smile aa jana…  
         <br>
         Ye sab chhoti chhoti cheezein hi to hoti hain jo kisi ko special banati hain.  
         <br>
-        Kabhi kabhi sach me lagta hai ki agar aap na hoti to shayad itni khushi bhi feel nahi hoti.">
+        Kabhi kabhi sach me lagta hai ki agar aap na hoti to shayad itni khushi bhi feel nahi hoti.
     </div>
 
     <!-- 🤍 CONNECTION -->
-    <div class="section type" data-text="
+    <div class="section">
         🤍 <b>Connection</b> —  
         Aapse jo connection hai na, wo define karna mushkil hai. Na wo sirf dosti hai, na simple attraction… wo kuchh aur hi hai.  
         <br>
         Ek aisa bond jo bina force ke bana, bina kisi expectation ke bana… bas naturally grow hota gaya.  
         <br>
-        Aur honestly, aise connections life me bahut rare hote hain.">
+        Aur honestly, aise connections life me bahut rare hote hain.
     </div>
 
     <!-- 🌼 SAMAJH -->
-    <div class="section type" data-text="
+    <div class="section">
         🌼 <b>Samajh</b> —  
         Aapki sabse special baat ye hai ki aap meri bato ko samajh leti ho… bina zyada explain kiye.  
         <br>
         Kab main thik hoon, kab nahi… kab main bas normal baat kar raha hoon aur kab mujhe sach me kisi ki zarurat hai — aapko pata chal jata hai.  
         <br>
-        Aur ye cheez honestly mujhe aapke aur kareeb le aati hai.">
+        Aur ye cheez honestly mujhe aapke aur kareeb le aati hai.
     </div>
 
     <!-- 🌺 DOSTI -->
-    <div class="section type" data-text="
+    <div class="section">
         🌺 <b>Dosti</b> —  
         Aap sirf ek friend nahi ho… aap meri best friend ho.  
         <br>
         Aur best friend wo hota hai jiske saath aap bina soche sab share kar sako, jiske saamne aap apne asli roop mein reh sako.  
         <br>
-        Aur aapne mujhe wo comfort diya hai.">
+        Aur aapne mujhe wo comfort diya hai.
     </div>
 
     <!-- 💖 SPECIAL -->
-    <div class="section type" data-text="
+    <div class="section">
         💖 <b>Special</b> —  
         Aap meri life ka ek aisa part ban chuki ho jise main lose nahi karna chahta.  
         <br>
         Aapki presence se sab kuch thoda better lagta hai… chahe mood kaisa bhi ho.  
         <br>
-        Aur ye jo feeling hai na… ye hi batati hai ki aap kitni special ho.">
+        Aur ye jo feeling hai na… ye hi batati hai ki aap kitni special ho.
     </div>
 
     <!-- 💭 FEELINGS -->
-    <div class="section type" data-text="
+    <div class="section">
         💭 <b>Feelings</b> —  
         Shayad main hamesha clearly express nahi kar pata… par jo feel karta hoon wo genuine hai.  
         <br>
         Aapki smile, aapki baatein, aapki nature — sab kuch mujhe achha lagta hai.  
         <br>
-        Aur jab bhi main aapke baare me sochta hoon, automatically ek smile aa jati hai.">
+        Aur jab bhi main aapke baare me sochta hoon, automatically ek smile aa jati hai.
     </div>
 
     <!-- 🌈 JOURNEY -->
-    <div class="section type" data-text="
+    <div class="section">
         🌈 <b>Journey</b> —  
         Humari journey abhi tak jitni bhi rahi hai… wo simple nahi thi, par beautiful zarur thi.  
         <br>
         Har ek moment, har ek conversation ne kuch na kuch add kiya hai is connection me.  
         <br>
-        Aur main chahta hoon ki ye journey aise hi continue rahe.">
+        Aur main chahta hoon ki ye journey aise hi continue rahe.
     </div>
 
     <!-- 💌 PROMISE -->
-    <div class="section type" data-text="
+    <div class="section">
         💌 <b>Promise</b> —  
         Main ye promise nahi karta ki sab perfect hoga…  
         <br>
         Par haan, ye zarur promise karta hoon ki main hamesha aapkee saath rahunga, chahe situation kaisi bhi ho.  
         <br>
-        Aapke liye respect, care aur honesty kabhi kam nahi hogi.">
+        Aapke liye respect, care aur honesty kabhi kam nahi hogi.
     </div>
     <!-- 💬 CHAT STYLE -->
-    <div class="section type" data-text="
-        💬 <b>Hamari Choti Si Chat 💖</b>">
+    <div class="section">
+        💬 <b>Hamari Choti Si Chat 💖</b>
         
         <div class="chat">
             <div class="msg left">Hello 🙂</div>
@@ -382,15 +355,15 @@ button:active {
 
     <!-- SURPRISE BOX -->
     <div id="surpriseBox" class="hidden">
-        <div class="section type" data-text="
+        <div class="section">
             💖 Aap meri life ka sabse pyara part ho 💖  
             <br>
-            Aur ye website sirf ek chhoti si koshish hai aapko special feel karane ki 😊">
+            Aur ye website sirf ek chhoti si koshish hai aapko special feel karane ki 😊
         </div>
     </div>
 
     <!-- 🎂 FINAL WISH -->
-    <div class="section type" data-text="
+    <div class="section-">
         🎂 <b>Birthday Wish</b> —  
         Aaj aapka special day hai… aur main bas ye chahta hoon ki aap hamesha khush rahe.  
         <br>
@@ -400,7 +373,7 @@ button:active {
          <br><br>
         Aapka
         <br>
-         <b>Gajendra</b>">
+         <b>Gajendra</b>
     </div>
 
 </div> <!-- ✅ CLOSE MAIN DIV -->
@@ -419,7 +392,6 @@ function openSite() {
     document.getElementById("music").play();
     startHearts();
     startBalloons();
-    startTyping(); // ⭐ IMPORTANT LINE ADDED
 }
 
 /* Floating Hearts */
@@ -468,29 +440,8 @@ document.addEventListener("click", function(e) {
     setTimeout(()=>heart.remove(),2000);
 });
 
-
-/* 💖 SEQUENTIAL TYPING (ADD THIS PART) */
-const elements = document.querySelectorAll(".type");
-let speed = 20;
-
-function typeText(el, text, i = 0, callback) {
-    if (i < text.length) {
-        el.innerHTML += text.charAt(i);
-        setTimeout(() => typeText(el, text, i + 1, callback), speed);
-    } else if (callback) {
-        setTimeout(callback, 800);
-    }
-}
-
-function startTyping(index = 0) {
-    if (index >= elements.length) return;
-
-    let el = elements[index];
-    let text = el.getAttribute("data-text");
-
-    typeText(el, text, 0, () => {
-        startTyping(index + 1);
-    });
-}
-
 </script>
+
+</body>
+</html>
+    
